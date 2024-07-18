@@ -1,0 +1,3 @@
+collections.SortByNombre
+collections.SortByEdad
+collections.Persona

@@ -1,0 +1,53 @@
+package es.ifp.programacion.ejercicio.uf6;
+
+
+import java.util.ArrayList;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		//Creo una nueva instancia de la clase DBPostgreSQLUtil 
+		DBPostgreSQLUtil operaciones = new DBPostgreSQLUtil();
+		
+		//Creo objetos empleado 
+		Employee emp1 = new Employee (1, "Juan", "Nieves Martinez", 18000);
+		Employee emp2 = new Employee (2, "Marta", "Ramirez Sanchez", 20000);
+		Employee emp3 = new Employee (3, "Robb", "Stark Tully", 16000);
+		
+		try {
+		
+		//Inserto los empleados en la base de datos 
+		int filaInsertada1 = operaciones.insertarEmpleado(emp1);
+		int filaInsertada2 = operaciones.insertarEmpleado(emp2);
+		int filaInsertada3 = operaciones.insertarEmpleado(emp3); 
+		
+		System.out.println("Fila insertada para empleado 1: "+filaInsertada1);
+		System.out.println("Fila insertada para empleado 2: "+filaInsertada2);
+		System.out.println("Fila insertada para empleado 3: "+filaInsertada3);
+		
+		//Capturo todos los empleados de la base 
+		System.out.println("Empleados después de la inserción: ");
+		ArrayList<Employee> todosEmpleados = operaciones.getAllEmpleados(); 
+		
+		//Enseño usando toString 
+		for (Employee employee : todosEmpleados) {
+			System.out.println(employee); //Esto llama automaticamente al metodo toString 
+			}
+       //Elimino un cliente de la base de datos 
+		boolean eliminado = operaciones.deleteEmpleado(emp3);
+		System.out.println("¿Eliminado correctamente?: "+eliminado);
+		
+		//actualizo base de datos:
+		System.out.println("Empleados después de proceso de eliminacion: ");
+		todosEmpleados = operaciones.getAllEmpleados();
+		
+		//Enseño 
+		for (Employee employee : todosEmpleados) {
+			System.out.println(employee); 
+			}
+		} finally {
+			operaciones.closeResources();
+		}
+	}		
+}

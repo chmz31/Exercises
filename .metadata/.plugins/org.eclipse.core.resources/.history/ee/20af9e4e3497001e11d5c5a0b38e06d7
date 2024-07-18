@@ -1,0 +1,73 @@
+package es.ifp.programacion.ejercicio.uf6;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+
+public class DBPostgreSQLUtil { 
+	
+	//URL, Username y contraseña
+	//Y variables
+	private static final String URL = "jdbc:postgresql://localhost:5432/empresaDB";
+	private static final String USER = "postgres";
+	private static final String PASS = "password"; 
+	private static  Connection conexion = null;
+	private static PreparedStatement stmt = null;
+	private static ResultSet rs = null;  
+	private static int numLin;
+	
+	/**
+	 * Se conecta a la BBDD empresadb creada en postgreSQL.
+	 * @return true si la conexiÃ³n fue satisfactoria, false sino.
+	 */
+	public boolean connectToDB() { 
+		
+		try {
+			conexion = DriverManager.getConnection(URL,USER,PASS);
+			return true;
+		} catch (ClassNotFoundException | SQLException e) {
+			System.out.println("Error al conectar a la base de datos");
+			return false;
+		}
+		
+	}
+	
+	/**
+	 * A partir de un objeto empleado, inserta todos sus datos en la tabla empleados.
+	 * @param emp Objeto de tipo empleado
+	 * @return 0 si no se ha insertado valor alguno. En caso contrario, el nÃºmero de filas insertadas.
+	 */
+	public int insertarEmpleado(Employee emp) {
+		if (!connectToDB()) {
+			System.out.println("Error al conectar a la base de datos");
+			return 0; //Devuelve 0 si la conexión falla
+		} 
+		
+		try {
+		//Creo mi statement usando la consulta de la clase SQLClassEjercicio	
+			stmt = conexion.prepareStatement(SQLClassEjercicio.SQL_INSERT);
+		//Establesco valores para los parametros 
+			stmt.setInt(1, emp.getEmpleadoId());
+			stmt.setString(2, emp.getNombre());
+			stmt.setString(3, emp.getApellidos());
+			stmt.setInt(4, emp.getSalario());
+		//Ejecuto 	
+			numLin = stmt.executeUpdate();
+		//Retorna el numero de lineas insertadas
+			return numLin;
+		} catch (SQLException e) {
+			System.out.println("Error al insertar en la base de datos");
+			return 0; //retorna 0 si ocurre una excepcion
+		} finally {
+			
+		}
+	}
+	
+}
+	
+	    
+	   

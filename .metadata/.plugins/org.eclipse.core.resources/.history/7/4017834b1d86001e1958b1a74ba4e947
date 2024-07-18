@@ -1,0 +1,145 @@
+package es.ifp.programacion.ejercicio.uf4;
+
+import java.util.Date;
+
+public class Proyecto {
+
+	//Atributos 
+	private String identificadorPro;
+	private String nombrePro; 
+	private String descPro;
+	private Date fechaIni;
+	private Cliente cliente1;
+	private Jefe jefe1;
+	
+   //Constructores 
+	
+	/**
+	 * Constructor con todos los parametros para la clase Proyecto
+	 * @param identificadorPro
+	 * @param nombrePro
+	 * @param string
+	 * @param date
+	 * @param cliente1
+	 */
+	public Proyecto (String identificadorPro, String nombrePro, String descPro , Date fechaIni, Cliente cliente1, Jefe jefe1){
+		this.identificadorPro=identificadorPro;
+		this.nombrePro=nombrePro; 
+		this.fechaIni=fechaIni;
+		this.cliente1=cliente1;
+		this.jefe1 = jefe1;
+		this.descPro=descPro;
+		}
+
+	
+	//Métodos 
+	
+	/**
+	 * Metodo get del Identificador del proyecto
+	 * @return String identificadorPro
+	 */
+	public String getIdentificadorPro() {
+		return identificadorPro;
+	}
+
+	/**
+	 * Metodo set del identificador del proyecto
+	 * @param cambia string identificadorPro 
+	 */
+	public void setIdentificadorPro(String identificadorPro) {
+		this.identificadorPro = identificadorPro;
+	}
+
+	/**
+	 * Metodo get del nombre del proyecto
+	 * @return string nombrePro
+	 */
+	public String getNombrePro() {
+		return nombrePro;
+	}
+
+	/**
+	 * Metodo set del nombre del proyecto
+	 * @param cambia string nombrePro
+	 */
+	public void setNombrePro(String nombrePro) {
+		this.nombrePro = nombrePro;
+	}
+
+	/**
+	 * metodo get de la fecha inicial
+	 * @return date fechaIni
+	 */
+	public Date getFechaIni() {
+		return fechaIni;
+	}
+
+	/**
+	 * Metodo set fecha inicial
+	 * @param cambia fechaIni
+	 */
+	public void setFechaIni(Date fechaIni) {
+		this.fechaIni = fechaIni;
+	}
+
+	/**
+	 * @return the cliente1
+	 */
+	public Cliente getCliente1() {
+		return cliente1;
+	}
+
+	/**
+	 * @param set de Cliente
+	 */
+	public void setCliente(Cliente cliente1) {
+		this.cliente1 = cliente1;
+	}
+
+	/**
+	 * @return the Jefe
+	 */
+	public String getNombreJef() {
+		return nombreJef;
+	}
+
+	/**
+	 * @param nombreJef the nombreJef to set
+	 */
+	public void setNombreJef(String nombreJef) {
+		this.nombreJef = nombreJef;
+	}
+
+	/**
+	 * Metodo get de la descripción del proyecto
+	 * @return String identificadorPro
+	 */
+	public String getdescPro() {
+		return descPro;
+	}
+
+	/**
+	 * Metodo set del descPro
+	 * @param cambia string descPro 
+	 */
+	public void setdescPro(String descPro) {
+		this.descPro = descPro;
+	}
+	
+	//Metodo toString que se sobreescribe para mostrar info por consola 
+	public String toString() {
+		return "Proyecto{" +
+                "Identificador de Proyecto='" + identificadorPro + '\'' +
+                ", Nombre de Proyecto='" + nombrePro + '\'' +
+                ", Descripción='" + descPro + '\'' +
+                ", Fecha de inicio=" + fechaIni + 
+                ", cliente=" + nombreCli +
+                ", Jefe=" + nombreJef +
+                '}';
+	}
+	
+	
+	
+	
+	
+}

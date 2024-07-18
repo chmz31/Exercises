@@ -1,0 +1,32 @@
+package es.ifp.programacion.ejercicio.uf4;
+
+import java.util.Date;
+
+public class ProgramaPrincipal {
+
+	public static void main(String[] args) {
+		
+		//objetos 
+		Jefe jefe1 = null; 
+		Cliente cliente1 = null; 
+		Proyecto pro1 = null;
+		
+		//entrada de datos 
+		
+		try {
+			
+			jefe1 = new Jefe("Jose", "Ramirez", "YAA-00000", 34); 
+			cliente1 = new Cliente("Adrian", "Sanchez","QAA-0000", "111111");
+			pro1 = new Proyecto("AAAAA-AAAAAAA", "ProyectoNuevo", "12/2", jefe1, cliente1);
+			
+			
+			
+		}
+		catch (ErrorException e1){
+			System.out.println("Error:"+e);
+		}
+		
+		
+	}
+
+}

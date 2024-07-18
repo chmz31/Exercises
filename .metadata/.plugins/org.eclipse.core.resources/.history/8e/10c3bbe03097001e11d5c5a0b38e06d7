@@ -1,0 +1,89 @@
+package es.ifp.programacion.ejercicio.uf6;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+
+public class DBPostgreSQLUtil { 
+	
+	//URL, Username y contraseña
+	//Y variables
+	private static final String URL = "jdbc:postgresql://localhost:5432/empresaDB";
+	private static final String USER = "postgres";
+	private static final String PASS = "password"; 
+	private static  Connection conexion = null;
+	private static PreparedStatement preparedStatement = null;
+	private static ResultSet rs = null;  
+	
+	/**
+	 * Se conecta a la BBDD empresadb creada en postgreSQL.
+	 * @return true si la conexiÃ³n fue satisfactoria, false sino.
+	 */
+	public boolean connectToDB() { 
+		
+		try {
+			conexion = DriverManager.getConnection(URL,USER,PASS);
+			return true;
+		} catch (SQLException e) {
+			System.out.println("Error al conectar a la base de datos");
+			return false;
+		}
+		
+	}
+	
+	 public ArrayList<Employee> getAllEmployees(String query) {
+	        ArrayList<Employee> employees = new ArrayList<>();
+
+	        // Check if the connection is established
+	        if (!connectToDB()) {
+	            System.out.println("Failed to connect to the database.");
+	            return employees; // Return an empty list if the connection fails
+	        }
+
+	        try {
+	            // Create a prepared statement
+	            PreparedStatement preparedStatement = conexion.prepareStatement(query);
+
+	            // Execute the query
+	            ResultSet resultSet = preparedStatement.executeQuery();
+
+	            // Process the result set
+	            while (resultSet.next()) {
+	                int id = resultSet.getInt("id");
+	                String name = resultSet.getString("name");
+	                String surname = resultSet.getString("surname");
+	                double wage = resultSet.getDouble("wage");
+
+	                // Create an Employee object and add it to the list
+	                Employee employee = new Employee(id, nombre, apellido, sueldo);
+	                employees.add(employee);
+	            }
+
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        } finally {
+	            // Close the connection in the finally block
+	            closeConnection();
+	        }
+
+	        return employees;
+	    }
+
+	    private void closeConnection() {
+	        // Close the connection if it was opened
+	        try {
+	            if (connection != null && !connection.isClosed()) {
+	                connection.close();
+	            }
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	    }
+	}
+	
+	    
+	   

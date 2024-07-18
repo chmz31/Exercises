@@ -1,0 +1,20 @@
+package es.ifp.programacion.ejercicio.uf4;
+
+import java.util.Date;
+
+public class ProgramaPrincipal {
+
+	public static void main(String[] args) {
+		
+		//objetos 
+		Cliente cliente1 = new Cliente("Carlos", "Sanchez", "AAAAAAA", "1234"); 
+		Jefe jefe1 = new Jefe("Juan", "Jimenez", "AAAABBBBB", 44);
+		Proyecto pro1 = new Proyecto ("P1", "ProyectoNuevo", "Es un proyecto nuevo", new Date(),cliente,jefe);
+		
+		
+		
+		
+	
+
+}
+}

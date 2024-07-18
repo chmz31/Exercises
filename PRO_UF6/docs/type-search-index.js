@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"es.ifp.programacion.ejercicio.uf6","l":"DBPostgreSQLUtil"},{"p":"es.ifp.programacion.ejercicio.uf6","l":"Employee"},{"p":"es.ifp.programacion.ejercicio.uf6","l":"Main"},{"p":"es.ifp.programacion.ejercicio.uf6","l":"SQLClassEjercicio"}];updateSearchResults();

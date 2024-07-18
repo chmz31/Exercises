@@ -1,0 +1,12 @@
+Mascarillas
+10
+Gel
+8
+Vacunas
+500
+Respiradores
+60
+Batas
+8
+Bisturis
+12

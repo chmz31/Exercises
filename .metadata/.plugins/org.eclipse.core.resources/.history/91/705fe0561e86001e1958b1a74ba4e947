@@ -1,0 +1,50 @@
+package es.ifp.programacion.ejercicio.uf4;
+
+public class Cliente extends Persona{
+	
+	//Atributos de objeto
+	
+	private String codigoCliente;
+	
+	//Constructores 
+	
+	/**
+	 * Constructor con todos los parametros para la clase Cliente
+	 * @param nombre
+	 * @param apellidos
+	 * @param dni
+	 * @param codigoCliente
+	 */
+	
+	public Cliente (String nombre, String apellidos, String dni, String codigoCliente ) {
+		super (nombre, apellidos, dni); 
+		this.codigoCliente=codigoCliente;
+		
+	}
+
+	//Metodos
+	
+	/**
+	 * Metodo Get del codigo del cliente 
+	 * @return String codigoCliente
+	 */
+	public String getCodigoCliente() {
+		return codigoCliente;
+	}
+
+	/**
+	 * Metodo set del codigo del cliente
+	 * @param cambiar en un string el codigoCliente 
+	 */
+	public void setCodigoCliente(String codigoCliente) {
+		this.codigoCliente = codigoCliente;
+	}
+	
+	
+	
+	
+	
+  
+	
+
+}

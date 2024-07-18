@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<clase>
+	<estudiante>
+		<id>A001</id>
+		<nombre>Antonio</nombre>
+		<apellidos>Guerra Guerra</apellidos>
+	</estudiante>
+	
+	<estudiante>
+		<id>A031</id>
+		<nombre>María</nombre>
+		<apellidos>De la Luz</apellidos>
+	</estudiante>
+	
+	<estudiante>
+		<id>A032</id>
+		<nombre>Juan Pedro</nombre>
+		<apellidos>Torres Sena</apellidos>
+	</estudiante>
+	
+	<estudiante>
+		<id>A040</id>
+		<nombre>Roberto</nombre>
+		<apellidos>Carlos Carlos</apellidos>
+	</estudiante>
+</clase>
+	

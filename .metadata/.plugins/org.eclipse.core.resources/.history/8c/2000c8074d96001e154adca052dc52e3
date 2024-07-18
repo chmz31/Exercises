@@ -1,0 +1,34 @@
+package es.ifp.programacion.uf6.persistencia;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+
+
+public class MainBorra {
+
+	public static void main(String[] args) {
+        final String dbURL = "jdbc:mysql://localhost/testDB?serverTimezone=Europe/Madrid"; 
+		Connection conexion = null;
+		ResultSet rs = null; 
+		PreparedStatement ps = null; 
+		int numFilas; 
+		
+		try {
+			conexion = DriverManager.getConnection(dbURL , "root","");
+		} catch (SQLException sqle) {
+			
+		} finally {
+			
+		}
+		
+		
+		
+
+	}
+
+}

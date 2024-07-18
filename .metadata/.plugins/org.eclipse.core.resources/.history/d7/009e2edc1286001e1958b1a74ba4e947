@@ -1,0 +1,19 @@
+package es.ifp.programacion.ejercicio.uf4;
+
+public class ProgramaPrincipal {
+
+	public static void main(String[] args) {
+		
+		Jefe jefe = new Jefe ("Roberto", "Carlos", "AAA-00000", 33); 
+		
+		int num = jefe.getNumeroEmpleado();
+		
+		System.out.println(num);
+		
+		jefe.setNumeroEmpleado(10);
+		
+		System.out.println(num);
+		
+	}
+
+}

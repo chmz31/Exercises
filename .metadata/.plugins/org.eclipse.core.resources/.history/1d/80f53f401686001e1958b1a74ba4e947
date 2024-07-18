@@ -1,0 +1,121 @@
+package es.ifp.programacion.ejercicio.uf4;
+
+import java.util.Date;
+
+public class Proyecto {
+
+	//Atributos 
+	private String identificadorPro;
+	private String nombrePro; 
+	private String descPro;
+	private Date fechaIni;
+	private String nombreCli;
+	private String nombreJef;
+	
+   //Constructores 
+	
+	/**
+	 * Constructor con todos los parametros para la clase Proyecto
+	 * @param identificadorPro
+	 * @param nombrePro
+	 * @param fechaIni
+	 * @param nombreCli
+	 * @param nombreJef
+	 */
+	Proyecto (String identificadorPro, String nombrePro, Date fechaIni, String nombreCli, String nombreJef){
+		this.identificadorPro=identificadorPro;
+		this.nombrePro=nombrePro; 
+		this.fechaIni=fechaIni;
+		this.nombreCli=nombreCli;
+		this.nombreJef=nombreJef;
+		this.descPro=descPro;
+		}
+
+	
+	//Métodos 
+	
+	/**
+	 * Metodo get del Identificador del proyecto
+	 * @return String identificadorPro
+	 */
+	public String getIdentificadorPro() {
+		return identificadorPro;
+	}
+
+	/**
+	 * Metodo set del identificador del proyecto
+	 * @param cambia string identificadorPro 
+	 */
+	public void setIdentificadorPro(String identificadorPro) {
+		this.identificadorPro = identificadorPro;
+	}
+
+	/**
+	 * Metodo get del nombre del proyecto
+	 * @return string nombrePro
+	 */
+	public String getNombrePro() {
+		return nombrePro;
+	}
+
+	/**
+	 * Metodo set del nombre del proyecto
+	 * @param cambia string nombrePro
+	 */
+	public void setNombrePro(String nombrePro) {
+		this.nombrePro = nombrePro;
+	}
+
+	/**
+	 * metodo get de la fecha inicial
+	 * @return date fechaIni
+	 */
+	public Date getFechaIni() {
+		return fechaIni;
+	}
+
+	/**
+	 * Metodo set fecha inicial
+	 * @param cambia fechaIni
+	 */
+	public void setFechaIni(Date fechaIni) {
+		this.fechaIni = fechaIni;
+	}
+
+	/**
+	 * @return the nombreCli
+	 */
+	public String getNombreCli() {
+		return nombreCli;
+	}
+
+	/**
+	 * @param nombreCli the nombreCli to set
+	 */
+	public void setNombreCli(String nombreCli) {
+		this.nombreCli = nombreCli;
+	}
+
+	/**
+	 * @return the nombreJef
+	 */
+	public String getNombreJef() {
+		return nombreJef;
+	}
+
+	/**
+	 * @param nombreJef the nombreJef to set
+	 */
+	public void setNombreJef(String nombreJef) {
+		this.nombreJef = nombreJef;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+}

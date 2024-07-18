@@ -1,0 +1,90 @@
+package es.ifp.programacion.poo.introduccion;
+
+/**
+ * Definición de la clase Persona
+ * Una persona se compone de nombre, apellidos y edad 
+ * 
+ */
+
+public class Persona { 
+	
+	//Atributos de objetos 
+	
+	private String nombre; 
+	private String apellidos; 
+	private int edad; 
+	private String correoElectronico;
+	
+	//Atributo de clase 
+	public static String nacionalidad = "España"; 
+	
+	//Constructores 
+	/**
+	 * Constructor por Defecto
+	 */
+	public Persona(){
+		nombre="";
+		apellidos="";
+	    correoElectronico="";
+		edad=0;
+	}
+	/**
+	 * Constructor con 3 parámetros: 
+	 * @param nom
+	 * @param ape
+	 * @param ed
+	 */
+	public Persona(String nom, String ape, int ed){
+		nombre = nom; 
+		apellidos = ape;
+		edad = ed; 
+	}
+	
+	/**
+	 * Constructor con todos los parametros
+	 * @param nom nombre 
+	 * @param ape apellido 
+	 * @param edad edad 
+	 * @param correo correo electronico de la persona
+	 */
+	Persona(String nom, String ape, int ed, String correo){
+		this.nombre = nom; 
+		this.apellidos = ape;
+		this.edad = ed;
+		this.correoElectronico = correo; 
+	}
+	  
+	public void cambiarCorreoElectronic (String correoElectronico) {
+		this.correoElectronico=correoElectronico; 
+	}
+	 
+	public void mirar () {
+		System.out.println(this.nombre+" esta mirando");
+		System.out.println("Nacionalidad"+""+nacionalidad);
+	}
+	
+	public void mirar (String paisaje) {
+		System.out.println(this.nombre+"esta mirando"+paisaje);
+	}
+	//Métodos de la clase 
+	/**
+	 * Acción de mirar de la persona
+	 */
+//	public void mirar() {
+//		metodoPrivado();
+//	}
+	/**
+	 * 
+	 */
+//	public void cambiarApellido () {
+//		apellidos = "Santana Santana";
+		
+//	}
+/**
+ * 
+ */
+//	private void metodoPrivado() {
+//		System.out.println("Estás en la clase Persona cuyo nombre es:"+""+nombre);
+//	}
+	
+}

@@ -1,0 +1,15 @@
+package es.ifp.programacion.ejercicio.uf4;
+
+public class Jefe extends Persona {
+
+	//Declaracion de Atributos 
+	
+	private int numeroEmpleado;
+	
+	//Constructores 
+	
+	Jefe (String nombre, String apellidos, String dni, int numeroEmpleado){
+		
+	}
+	
+}

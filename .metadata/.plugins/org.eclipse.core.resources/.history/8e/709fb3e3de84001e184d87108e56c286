@@ -1,0 +1,13 @@
+package es.ifp.programacion.ejercicio.uf4;
+
+import java.util.Date;
+
+public class Proyecto {
+
+	//Atributos 
+	private String identificadorPro;
+	private String nombrePro;
+	priavte Date 
+	
+	
+}

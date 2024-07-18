@@ -1,0 +1,26 @@
+package es.ifp.programacion.uf6.persistencia;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Main {
+
+	public static void main(String[] args) { 
+		
+		//1.- Establecer la conexión con la BBDD. 
+		
+		try {
+		Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:testDB" , "root","");
+		
+		} catch (SQLException e){
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+
+}

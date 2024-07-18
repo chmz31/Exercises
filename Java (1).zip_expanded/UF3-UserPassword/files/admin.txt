@@ -1,0 +1,3 @@
+usuario: alsa7966
+password: al8869sa
+edad: 21

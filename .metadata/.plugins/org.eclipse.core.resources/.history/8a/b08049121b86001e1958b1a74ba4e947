@@ -1,0 +1,54 @@
+package es.ifp.programacion.ejercicio.uf4;
+
+public class Jefe extends Persona {
+
+	//Declaracion de Atributos 
+	
+	private int numeroEmpleado;
+	
+	//Constructores 
+	
+	/**
+	 * Constructor con todos los parametros para la clase Jefe
+	 * @param nombre
+	 * @param apellidos
+	 * @param dni
+	 * @param numeroEmpleado
+	 */
+	
+	public Jefe (String nombre, String apellidos, String dni, int numeroEmpleado){
+		super (nombre, apellidos, dni); 
+		//Me aseguro de que numeroEmpleado este entre 0 y 100
+		this.numeroEmpleado = Math.max(0, Math.min(numeroEmpleado, 100)); 
+		
+	}
+
+	//Metodos 
+	
+	/** Metodo get del numero del empleado
+	 * @return numeroEmpleado en un int 
+	 */
+	public int getNumeroEmpleado() {
+		return numeroEmpleado;
+	}
+
+	/**
+	 * Metodo set del numero de empleado
+	 * @param cambia int numeroEmpleado 
+	 * @return 
+	 */
+	public void setNumeroEmpleado(int numeroEmpleado) {
+		
+		if (numeroEmpleado>=0 || numeroEmpleado<=100) {
+			numeroEmpleado = this.numeroEmpleado;
+		
+		}
+		else {
+			System.out.println("Numero de empleado no válido, por favor escriba un número dentro del rango");			
+		}
+	}
+	
+	
+	
+	
+}

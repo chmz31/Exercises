@@ -1,0 +1,20 @@
+package es.ifp.programacion.ejercicio.uf4;
+
+public class Cliente extends Persona{
+	
+	//Atributos de objeto
+	
+	private String codigoCliente;
+	
+	//Constructores 
+	
+	
+	
+	
+	
+	
+	//Metodos
+	
+	P
+
+}

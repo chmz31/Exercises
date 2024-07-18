@@ -1,0 +1,20 @@
+package es.ifp.programacion.ejercicio.uf6;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		//Creo una nueva instancia de la clase DBPostgreSQLUtil 
+		DBPostgreSQLUtil operaciones = new DBPostgreSQLUtil();
+		
+
+	}
+
+}
