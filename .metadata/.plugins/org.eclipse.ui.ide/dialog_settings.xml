@@ -6,6 +6,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="E:\Desarrollo_Interfaces\UF1\uf1\src"/>
+			<item value="E:\Programación"/>
 			<item value="C:\Users\cmanr\OneDrive\Documentos\Trabajo clase DAM IFP\Princípe Mestizo\Java (1).zip"/>
 		</list>
 	</section>
